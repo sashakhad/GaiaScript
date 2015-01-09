@@ -1,0 +1,28 @@
+*{
+  transition: 2s;
+}
+
+.gaia{
+  border-radius: 30px;
+}
+
+.spin{
+  transform: rotate(360deg);
+}
+
+.pulsate{
+  width: 150%;
+  height: 150%;
+}
+
+.left{
+  rotate: -30deg;
+}
+
+.right{
+  rotate: 30deg;
+}
+
+.orb{
+  border-radius: 30px;
+}
