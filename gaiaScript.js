@@ -1,12 +1,9 @@
-var tags =
-
-
-var changeWordTagsToSpan = function(tag, class) {
+var changeWordTagsToSpan = function(tag, gaiaClass) {
 	$(tag).each(function(index, element) {
     var $el = $(element);
     var words = $el.text().split(' ');
     var spans = words.map(function(word) {
-    	var newSpan = $('<span>').text(word + ' ').addClass(class);
+    	var newSpan = $('<span>').text(word + ' ').addClass(gaiaClass);
     	return newSpan;
     });
     spans.join(' ');
@@ -31,7 +28,7 @@ var randHexColorGenerator = function() {
 var changeWordColor = function(span) {
 	var newColor = randHexColorGenerator();
 	$(span).css('color', newColor);
-}
+};
 
 var changeWordColors = function() {
 	var counter = 250;
@@ -42,4 +39,4 @@ var changeWordColors = function() {
 	}, counter);
 		counter += 250;
 	});
-}
+};
