@@ -4,7 +4,9 @@
   "manifest_version": 2,
 
   "description": "Gaiaifying since 2015.",
-  
+  "icons" : {
+    "128": "icon128.png"
+  }, 
   "homepage_url": "http://insert_web_site_here.com/",
         "background_page": "background.html",
         "browser_action": {
