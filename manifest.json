@@ -1,0 +1,23 @@
+{
+  "name": "GaiaScript",
+  "version": "0.1",
+  "manifest_version": 2,
+
+  "description": "Gaiaifying since 2015.",
+  
+  "homepage_url": "http://insert_web_site_here.com/",
+        "background_page": "background.html",
+        "browser_action": {
+    
+    "default_title": "[INSERT WEB SITE NAME HERE] Fetcher",
+    "default_popup": "popup.html",
+    "content_scripts": [
+    {
+      // Change 'matches' attribute to load content
+      // script only in pages you want to.
+      "matches": ["http://codegram.com/team*"],
+      "css": ["basic.css"],
+      "js": ["jquery.min.js", "events.js"]
+    }]
+  }
+}
