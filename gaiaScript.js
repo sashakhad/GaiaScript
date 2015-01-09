@@ -1,12 +1,18 @@
-var tags =
+var classes = ['gaia', 'spin', 'pulsate', 'left', 'right', 'orb'];
 
+var tags = ['div', 'a', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'ul', 'ol'];
 
-var changeWordTagsToSpan = function(tag, class) {
+var randomElement = function(array){
+  var randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+};
+
+var changeWordTagsToSpan = function(tag, className) {
 	$(tag).each(function(index, element) {
     var $el = $(element);
     var words = $el.text().split(' ');
     var spans = words.map(function(word) {
-    	var newSpan = $('<span>').text(word + ' ').addClass(class);
+    	var newSpan = $('<span>').text(word + ' ').addClass(className);
     	return newSpan;
     });
     spans.join(' ');
@@ -40,6 +46,32 @@ var changeWordColors = function() {
 		setTimeout(function() {
 			changeWordColor(span);
 	}, counter);
-		counter += 250;
+		counter += 100;
 	});
 }
+
+changeWordTagsToSpan('p', 'gaia');
+changeWordColors()
+// var counter = 100;
+
+// setInterval(function(){
+//   var randomClass = randomElement(classes);
+//   var randomTag = randomElement(tags);
+//   changeWordTagsToSpan(randomTag, randomClass);
+//   changeWordColor();
+//   counter += 100;
+// }, counter)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
