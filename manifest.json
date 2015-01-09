@@ -12,7 +12,7 @@
   },
   "content_scripts": [ {
     "js": [ "jquery-2.0.2.min.js", "background.js", "gaiaScript.js" ],
-    //"css": ["customStyles.css"],
+    "css": ["gaia.css"],
     "matches": [ "http://*/*", "https://*/*"]
   }]
 }

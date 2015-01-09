@@ -40,3 +40,21 @@ var changeWordColors = function() {
 		counter += 250;
 	});
 };
+
+var randomElement = function(array){
+  var randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+};
+
+var classes = ['gaia', 'spin', 'pulsate', 'left', 'right', 'orb'];
+
+var toggleRandomClasses = function(){
+  var counter = 100;
+  var shuffledSpans = shuffle($('span'));
+  shuffledSpans.each(function(index, span) {
+    setInterval(function() {
+      $(span).toggleClass('spin');
+  }, counter);
+    counter += 100;
+  });
+}();
